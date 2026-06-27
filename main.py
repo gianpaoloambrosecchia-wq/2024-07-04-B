@@ -16,13 +16,13 @@ def main(page: ft.Page):
 ft.app(target=main)
 
 
-# DFS (Depth First Search)
+# DFS (Depth First Search)  visita in profondita, tutti i nodi raggiungibili
 #
 # nx.dfs_edges(G, source=nodo) → restituisce gli archi della visita
 # nx.dfs_tree(G, source=nodo) → restituisce il grafo albero DFS
 # list(nx.dfs_preorder_nodes(G, source=nodo)) → lista nodi in ordine di visita
 #
-# BFS (Breadth First Search)
+# BFS (Breadth First Search) visita in ampiezza, percorso piu corto per grafi non pesati
 #
 # nx.bfs_edges(G, source=nodo) → restituisce gli archi della visita
 # nx.bfs_tree(G, source=nodo) → restituisce il grafo albero BFS
@@ -33,8 +33,11 @@ ft.app(target=main)
 # nx.shortest_path(G, source=a, target=b, weight='weight') → cammino minimo
 # nx.shortest_path_length(G, source=a, target=b, weight='weight') → solo la distanza
 # nx.dijkstra_path(G, source=a, target=b, weight='weight') → equivalente con Dijkstra
+# Ricorda di mettere weight ='weight' per trovare il cammino con peso minimo
+# altrimenti trova il piu corto in termini di numero di nodi
 
 
 # Non diretto → nx.connected_components(G)
 # Diretto weakly → nx.weakly_connected_components(G)
 # Diretto strongly → nx.strongly_connected_components(G)
+# Componente connessa di un nodo -> nx.node_connected_component(G, node)
